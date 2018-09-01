@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	public Rigidbody2D rb;
 	public float forceMod=2.0f;
+	public bool controlLock = false;
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		rb.AddForce (new Vector2(Input.GetAxis ("Horizontal")*forceMod,0.0f));
+		if (!controlLock) rb.AddForce (new Vector2(Input.GetAxis ("Horizontal")*forceMod,0.0f));
 		if (rb.velocity.x < 0.0f)
 			gameObject.GetComponent<SpriteRenderer> ().flipX = true;
 		else

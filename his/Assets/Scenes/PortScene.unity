@@ -340,7 +340,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1131769845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   forceMod: 2
+  controlLock: 0
 --- !u!1 &1318406900
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1318406902}
   - component: {fileID: 1318406901}
+  - component: {fileID: 1318406903}
   m_Layer: 0
   m_Name: "\u0414\u043E\u0441\u043A\u0430"
   m_TagString: Untagged
@@ -427,6 +429,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1318406903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1318406900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b75a3bad4a9c28d498dd56c1efffc81a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactDistanceSqrd: 24
+  player: {fileID: 1131769842}
+  inputTrigger: Interact
+  persistantColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1699499327
 GameObject:
   m_ObjectHideFlags: 0
